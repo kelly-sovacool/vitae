@@ -38,7 +38,7 @@ latexcv_cv_entries <- new_entry_formats(
   },
   detailed = function(what, when, with, where, why){
     why <- lapply(why, function(x) {
-      if(length(x) == 0) return("\\empty")
+      if(nchar(x) == 0) return("this is blank")
       paste(c(
         "\\begin{minipage}{0.7\\textwidth}%",
         "\\begin{itemize}%",
